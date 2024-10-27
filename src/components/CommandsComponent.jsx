@@ -1,39 +1,44 @@
 
 import { Button, Group } from '@mantine/core';
-import { IconPhoto, IconDownload, IconArrowRight } from '@tabler/icons-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
+import { FaSave, FaCheckCircle, FaFileExcel, FaPrint } from "react-icons/fa";
+import { LuRefreshCcw } from "react-icons/lu";
 
 function CommandsComponent() {
     return (
+        <div style={{display:'flex'}}>
         <Group>
-            <FontAwesomeIcon icon="fa-solid fa-floppy-disk" />
+            
+            <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+             onClick={() => setCount((count) => count + 1)}> 
+             Save <FaSave size={20}/>
+            </Button>
+
+            
             <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
              onClick={() => setCount((count) => count + 1)}>
-            Save
-            </Button>
-
-            <FontAwesomeIcon icon="fa-solid fa-check" />
-            <Button variant="filled" color="violet" onClick={() => setCount((count) => count + 1)}>
-            Save/Approve
-            </Button>
-
-            <FontAwesomeIcon icon="fa-solid fa-arrows-rotate" />
-            <FontAwesomeIcon icon="fa-solid fa-rotate-right" />
-            <Button variant="filled" color="violet" onClick={() => setCount((count) => count + 1)}>
-            Refresh
-            </Button>
-
-            <FontAwesomeIcon icon="fa-solid fa-file-excel" />
-            <Button variant="filled" color="violet" onClick={() => setCount((count) => count + 1)}>
-            Export
-            </Button>
-
-            <FontAwesomeIcon icon="fa-solid fa-print" />
-            <Button variant="filled" color="violet" onClick={() => setCount((count) => count + 1)}>
-            Print
+            Save/Approve <FaCheckCircle size={20} />
             </Button>
         </Group>
+
+
+        <Group style={{marginLeft:'10px'}}> 
+            <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+             onClick={() => setCount((count) => count + 1)}>
+            Refresh <LuRefreshCcw size={20}/>
+            </Button>
+            
+            <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+             onClick={() => setCount((count) => count + 1)}>
+            Export <FaFileExcel size={20} />
+            </Button>
+
+           
+            <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+             onClick={() => setCount((count) => count + 1)}>
+            Print  <FaPrint size={20}/>
+            </Button>
+        </Group>
+        </div>
     );
 }
 

@@ -1,7 +1,11 @@
+import { SimpleGrid } from "@mantine/core";
+import { FaHeart } from "react-icons/fa";
+
 function Header() {
     return (
         <>
-             <h2>Commentary UI</h2>
+             <SimpleGrid>
+                </SimpleGrid>             
         </>
     );
 }
