@@ -2,6 +2,7 @@ import './App.css'
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import CommandsComponent from './components/CommandsComponent'
+import { CommentaryDetails } from './components/CommentaryDetails';
 import Header from './components/header'
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
         <CommandsComponent />        
       </div>
 
+      <CommentaryDetails />
       {/* //Static Details component.
-
+      
       //Add Comments component.
 
       //Grid to  show history of comments.
