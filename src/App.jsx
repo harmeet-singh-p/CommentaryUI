@@ -1,33 +1,35 @@
-import './App.css'
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import CommandsComponent from './components/CommandsComponent'
 import { CommentaryDetails } from './components/CommentaryDetails';
-import Header from './components/header'
+import Header from './components/Header'
+import AddComments from './components/AddComments';
+import CommentsHistory from './components/CommentsHistory';
 
 function App() {
   
   return (
-    <MantineProvider>
-      <Header/>
-      {/* //header component.
+    <MantineProvider>     
+      <div className="border-solid border-2 border-indigo-600  ">
+        <Header/>
 
-      //commands component. */}
-      <div className="card">
-        <CommandsComponent />        
-      </div>
+        {/* Static Details component. */}
+        <CommentaryDetails />
+        
 
-      <CommentaryDetails />
-      {/* //Static Details component.
-      
-      //Add Comments component.
+        {/* commands component. */}
+        <div className="p-3">
+          <CommandsComponent />        
+        </div>      
+        
+        <AddComments/>
 
-      //Grid to  show history of comments.
-
-      //footer. */}
-      <p className="read-the-docs">
-        This is natwest property with confidentiality.
-      </p>
+        <CommentsHistory />
+        {/*   //footer. */}
+        <p className='text-xs text-blue-800'>
+          This is natwest property with confidentiality.
+        </p>
+      </div> 
     </MantineProvider>
   )
 }

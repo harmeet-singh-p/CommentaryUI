@@ -5,18 +5,18 @@ import { LuRefreshCcw } from "react-icons/lu";
 
 function CommandsComponent() {
     return (
-        <div style={{display:'flex'}}>
+        <div className="flex flex-row">
         <Group>
             
             <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
              onClick={() => setCount((count) => count + 1)}> 
-             Save <FaSave size={20}/>
+             Save <FaSave className='ml-2'  size={20}/>
             </Button>
 
             
             <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
              onClick={() => setCount((count) => count + 1)}>
-            Save/Approve <FaCheckCircle size={20} />
+            Save/Approve <FaCheckCircle className='ml-2' size={20} />
             </Button>
         </Group>
 
@@ -24,18 +24,18 @@ function CommandsComponent() {
         <Group style={{marginLeft:'10px'}}> 
             <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
              onClick={() => setCount((count) => count + 1)}>
-            Refresh <LuRefreshCcw size={20}/>
+            Refresh <LuRefreshCcw className='ml-2' size={20}/>
             </Button>
             
             <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
              onClick={() => setCount((count) => count + 1)}>
-            Export <FaFileExcel size={20} />
+            Export <FaFileExcel className='ml-2' size={20} />
             </Button>
 
            
             <Button variant="gradient" gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
              onClick={() => setCount((count) => count + 1)}>
-            Print  <FaPrint size={20}/>
+            Print  <FaPrint className='ml-2' size={20}/>
             </Button>
         </Group>
         </div>
